@@ -9,6 +9,7 @@ export default class GiphyController extends Component {
 		this.state = {
 			data: []
 		}
+		
 		this.getGiphies = this.getGiphies.bind(this);
 		this.selectOne = this.selectOne.bind(this);
 		this.randomizeOrder = this.randomizeOrder.bind(this);
