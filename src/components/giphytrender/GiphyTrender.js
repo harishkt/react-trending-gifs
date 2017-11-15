@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GiphyHeader from './giphyHeader';
 import GiphyController from './giphyController';
+import './index.css';
 const GIPHY_URL = 'http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC'
 export class Giphy extends Component {
 	constructor(props) {
@@ -31,7 +32,7 @@ export class Giphy extends Component {
 		const { data } = this.state;
 		return(
 			<div>
-				<GiphyHeader />
+				<GiphyHeader className='title'/>
 				<GiphyController data={data}/>
 			</div>
 		)

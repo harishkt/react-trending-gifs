@@ -2,15 +2,13 @@ import React from 'react';
 
 const Button = ({ className, name, onClick}) => {
 	return(
-		<div>
-			<button
-				type='button'
-				className={className}
-				onClick={onClick}
-			>
-				{name}
-			</button>
-		</div>
+		<button
+			type='button'
+			className={className}
+			onClick={onClick}
+		>
+			{name}
+		</button>
 	);
 }
 const ButtonController = (props) => {
@@ -19,15 +17,16 @@ const ButtonController = (props) => {
 		selectOne,
 		randomizeOrder,
 		reverseOrder,
-		clearContainer
+		clearContainer,
+		className
 	} = props;
 	return(
 		<div>
-			<Button name='Get Giphies' onClick={getGiphies} className='' />
-			<Button name='Select one' onClick={selectOne} className='' />
-			<Button name='Randomize Order' onClick={randomizeOrder} className='' />
-			<Button name='Reverse Order' onClick={reverseOrder} className='' />
-			<Button name='clear All' onClick={clearContainer} className='' />
+			<Button name='Get Giphies' onClick={getGiphies} className={className} />
+			<Button name='Select one' onClick={selectOne} className={className} />
+			<Button name='Randomize Order' onClick={randomizeOrder} className={className} />
+			<Button name='Reverse Order' onClick={reverseOrder} className={className} />
+			<Button name='clear All' onClick={clearContainer} className={className} />
 		</div>
 	)
 }
